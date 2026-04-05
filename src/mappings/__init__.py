@@ -1,0 +1,1 @@
+"""Bundled OpenSearch index mappings."""

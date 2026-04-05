@@ -1,0 +1,21 @@
+{
+  "mappings": {
+    "properties": {
+      "roleguid_rolename": { "type": "text", "fields": { "keyword": { "type": "keyword" } } },
+      "tenantid": { "type": "keyword" },
+      "totalaccesses": { "type": "integer" },
+      "insertdate": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss.SSSSSS||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd'T'HH:mm:ss.SSSSSSXXX||yyyy-MM-dd'T'HH:mm:ssXXX||strict_date_optional_time||epoch_millis" },
+      "lastaccess": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss.SSSSSS||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd'T'HH:mm:ss.SSSSSSXXX||yyyy-MM-dd'T'HH:mm:ssXXX||strict_date_optional_time||epoch_millis" },
+      "rawaddress": { "type": "keyword" },
+      "convertedaddress_correlated_hostname_s": { "type": "text", "fields": { "keyword": { "type": "keyword" } } },
+      "authenticatedusername": { "type": "keyword" },
+      "datesandaccesses": { "type": "text" },
+      "message": { "type": "text" },
+      "datetime": { "type": "date" },
+      "timestamp_desc": { "type": "keyword" },
+      "openrelik_workflow_id": { "type": "keyword" },
+      "openrelik_source_file": { "type": "keyword" },
+      "openrelik_source_path": { "type": "keyword" }
+    }
+  }
+}

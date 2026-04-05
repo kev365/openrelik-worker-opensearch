@@ -1,0 +1,46 @@
+[project]
+name = "openrelik-worker-opensearch"
+version = "0.1.0"
+description = "OpenRelik worker that exports workflow results to OpenSearch with multi-format ingestion and Timesketch support"
+authors = [{ name = "OpenRelik" }]
+requires-python = ">=3.12,<4"
+readme = "README.md"
+dependencies = [
+    "celery[redis]>=5.4.0,<6",
+    "opensearch-py>=2.4.0,<3",
+    "openrelik-common>=0.7.5",
+    "openrelik-worker-common>=0.17",
+    "pyarrow>=15.0.0,<20",
+    "python-dateutil>=2.9.0,<3",
+    "requests>=2.28.0,<3",
+]
+
+[project.optional-dependencies]
+timesketch = [
+    "timesketch-import-client>=20230721",
+]
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.0,<9",
+    "pytest-cov>=5.0.0,<6",
+    "pytest-mock>=3.14.0,<4",
+]
+
+[tool.uv]
+default-groups = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88

@@ -1,0 +1,1 @@
+"""OpenRelik OpenSearch worker."""

@@ -1,0 +1,32 @@
+# Version control
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Dev files
+.claude/
+.devcontainer/
+.flake8
+.mypy_cache/
+temp_output*/
+test_output*.txt
+*.code-workspace
+
+# CI/CD
+.github/
+
+# Note: README.md is NOT excluded — hatchling needs it for the build

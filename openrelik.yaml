@@ -1,0 +1,12 @@
+publish: true
+
+display_name: OpenSearch
+description: Index workflow output into OpenSearch or upload to Timesketch.
+
+tools:
+  - display_name: OpenSearch
+    description: Open-source search and analytics suite that makes it easy to ingest, search, visualize, and analyze data.
+    url: https://opensearch.org/
+  - display_name: Timesketch
+    description: Open-source tool for collaborative forensic timeline analysis.
+    url: https://timesketch.org/
