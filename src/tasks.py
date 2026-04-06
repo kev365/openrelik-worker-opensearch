@@ -327,7 +327,7 @@ TIMESKETCH_TASK_METADATA = {
             "description": (
                 "\U0001F4CB Comma-separated list of SOURCE field names to concatenate "
                 "into the Timesketch 'message' field as "
-                "'field: value | field: value | ...' "
+                "'field: value | field: value | ...' (one per line in detail views). "
                 "(e.g. 'user,action,resource'). Original fields are preserved. "
                 "Auto-detected if the data has a 'message' column."
             ),
@@ -1190,7 +1190,7 @@ def _enrich_for_timesketch(
                 f"{f}: {doc[f]}" for f in fields
                 if f in doc and doc[f] is not None
             ]
-            doc["message"] = " | ".join(parts)
+            doc["message"] = ("\n| ").join(parts)
         elif ts_message_field in doc:
             doc["message"] = str(doc[ts_message_field])
 

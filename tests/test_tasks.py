@@ -567,7 +567,7 @@ def test_enrich_for_timesketch_single_field():
 def test_enrich_for_timesketch_comma_separated_fields():
     doc = {"user": "admin", "action": "login", "host": "srv1"}
     result = tasks._enrich_for_timesketch(doc, "user,action,host")
-    assert result["message"] == "user: admin | action: login | host: srv1"
+    assert result["message"] == "user: admin\n| action: login\n| host: srv1"
     # Original fields are preserved.
     assert result["user"] == "admin"
     assert result["action"] == "login"
