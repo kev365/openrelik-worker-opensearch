@@ -2,6 +2,13 @@
 
 OpenRelik worker for indexing workflow results into OpenSearch and uploading to Timesketch. Ships two Celery tasks from a single Docker image.
 
+## Search Guides
+
+For tips on querying your uploaded data, see:
+
+- [Searching in OpenSearch Dashboards](docs/searching-opensearch.md)
+- [Searching in Timesketch](docs/searching-timesketch.md)
+
 ## Tasks
 
 ### OpenSearch Upload
